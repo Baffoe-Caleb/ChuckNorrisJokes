@@ -10,7 +10,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+const val BASE_URL = "https://api.icndb.com/"
 
 class JokesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +37,7 @@ class JokesActivity : AppCompatActivity() {
 
                 val myStringBuilder = StringBuilder()
                 for(myData in responseBody){
-                    myStringBuilder.append(myData.title)
+                    myStringBuilder.append(myData.value.joke)
                     myStringBuilder.append("\n")
                 }
                 txt.text = myStringBuilder

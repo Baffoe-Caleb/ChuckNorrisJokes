@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiInterface {
-    @GET("todos")
+    @GET("jokes")
     fun getData():Call<List<JokesItems>>
 }

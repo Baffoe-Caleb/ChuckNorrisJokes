@@ -1,9 +1,15 @@
 package com.example.retroapp
 
-data class JokesItems (
-    val userId: Int,
-    val id: Int,
-    val title: String,
-    val completed: Boolean
-)
 
+import com.google.gson.annotations.SerializedName
+
+import androidx.annotation.Keep
+
+@Keep
+
+data class JokesItems(
+    @SerializedName("type")
+    val type: String,
+    @SerializedName("value")
+    val value: Value
+)
